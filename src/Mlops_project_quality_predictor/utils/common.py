@@ -3,46 +3,68 @@ import yaml
 import json
 import joblib
 
+from os import PathLike
 from pathlib import Path
 from typing import Any
 
 from ensure import ensure_annotations
 from box import ConfigBox
-from box.exceptions import BoxValueError
 
-from src.Mlops_project_quality_predictor import logger
+from src.Mlops_project_quality_predictor.utils import logger
 
 
-@ensure_annotations
-def read_yaml(path_to_yaml: Path) -> ConfigBox:
+def read_yaml(path_to_yaml: str | PathLike[str]) -> ConfigBox:
     """
     Read a YAML configuration file and return its contents
     as a ConfigBox object.
 
     Args:
-        path_to_yaml (Path): Path to the YAML configuration file.
+        path_to_yaml (str | PathLike[str]): Path to the YAML configuration file.
 
     Returns:
         ConfigBox: YAML file contents converted into a ConfigBox.
 
     Raises:
-        ValueError: If the YAML file is empty.
+        FileNotFoundError: If the YAML file does not exist.
+        ValueError: If the YAML is empty or has invalid syntax.
+        TypeError: If the YAML document is not a mapping.
     """
+    path = Path(path_to_yaml).expanduser()
+
+    if not path.exists():
+        message = f"YAML file does not exist: {path.resolve()}"
+        logger.error(message)
+        raise FileNotFoundError(message)
+
+    if not path.is_file():
+        message = f"YAML path is not a file: {path.resolve()}"
+        logger.error(message)
+        raise IsADirectoryError(message)
+
+    resolved_path = path.resolve()
+
     try:
-        with open(path_to_yaml) as yaml_file:
-            content = yaml.safe_load(yaml_file)
+        raw_content = path.read_text(encoding="utf-8")
+        content = yaml.safe_load(raw_content)
+    except yaml.YAMLError as exc:
+        logger.exception("Invalid YAML syntax in %s", resolved_path)
+        raise ValueError(f"Invalid YAML syntax in {resolved_path}: {exc}") from exc
 
-            logger.info(
-                f"yaml file: {path_to_yaml} is loaded successfully"
-            )
+    if content is None:
+        message = f"YAML file is empty or contains no mapping: {resolved_path}"
+        logger.error(message)
+        raise ValueError(message)
 
-            return ConfigBox(content)
+    if not isinstance(content, dict):
+        message = (
+            f"Expected a YAML mapping (dictionary) in {resolved_path}; "
+            f"got {type(content).__name__}"
+        )
+        logger.error(message)
+        raise TypeError(message)
 
-    except BoxValueError:
-        raise ValueError("yaml file is empty")
-
-    except Exception as e:
-        raise e
+    logger.info("YAML file loaded successfully: %s", resolved_path)
+    return ConfigBox(content)
 
 
 @ensure_annotations

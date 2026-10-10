@@ -1,0 +1,36 @@
+[2026-10-10 11:45:31,981: INFO: main:  Stage DataIngestionStage started]
+[2026-10-10 11:45:31,986: INFO: common: YAML file loaded successfully: C:\Users\babar\OneDrive\Desktop\MLops project\config\config.yaml]
+[2026-10-10 11:45:31,992: INFO: common: YAML file loaded successfully: C:\Users\babar\OneDrive\Desktop\MLops project\params.yaml]
+[2026-10-10 11:45:31,999: INFO: common: YAML file loaded successfully: C:\Users\babar\OneDrive\Desktop\MLops project\schema.yaml]
+[2026-10-10 11:45:32,001: INFO: common: created directory at: artifacts]
+[2026-10-10 11:45:32,004: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-10-10 11:45:32,730: INFO: data_ingestion: artifacts\data_ingestion\data.zip downloaded with the following info:
+Connection: close
+Content-Length: 23329
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "c69888a4ae59bc5a893392785a938ccd4937981c06ba8a9d6a21aa52b4ab5b6e"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 1458:27A476:EC2A7D:10647F3:6AC9D5BC
+x-github-edge-region: fra
+Accept-Ranges: bytes
+Date: Sat, 10 Oct 2026 06:45:33 GMT
+Via: 1.1 varnish
+X-Served-By: cache-sin-wsap440025-SIN
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1791614733.869304,VS0,VE234
+Vary: Authorization,Accept-Encoding
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: e8f788fdc442178b1d7545782ce29ffe06e1cc45
+Expires: Sat, 10 Oct 2026 06:50:33 GMT
+Source-Age: 0
+
+]
+[2026-10-10 11:45:32,787: INFO: data_ingestion: Files extracted successfully to: artifacts\data_ingestion]
+[2026-10-10 11:45:32,849: INFO: main: stage DataIngestionStage,completed]
