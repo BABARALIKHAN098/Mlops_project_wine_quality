@@ -157,3 +157,151 @@ Source-Age: 214
 
 ]
 [2026-10-10 11:09:23,118:INFO:540446256:Files extracted successfully to: artifacts\data_ingestion]
+[2026-10-13 23:56:57,287:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\config\config.yaml]
+[2026-10-13 23:56:57,304:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\params.yaml]
+[2026-10-13 23:56:57,323:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\schema.yaml]
+[2026-10-13 23:56:57,325:INFO:common:created directory at: artifacts]
+[2026-10-13 23:57:53,384:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\config\config.yaml]
+[2026-10-13 23:57:53,391:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\params.yaml]
+[2026-10-13 23:57:53,397:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\schema.yaml]
+[2026-10-13 23:57:53,399:INFO:common:created directory at: artifacts]
+[2026-10-13 23:58:36,087:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\config\config.yaml]
+[2026-10-13 23:58:36,095:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\params.yaml]
+[2026-10-13 23:58:36,103:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\schema.yaml]
+[2026-10-13 23:58:36,106:INFO:common:created directory at: artifacts]
+[2026-10-14 00:00:39,433:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\config\config.yaml]
+[2026-10-14 00:00:39,440:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\params.yaml]
+[2026-10-14 00:00:39,447:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\schema.yaml]
+[2026-10-14 00:00:39,449:INFO:common:created directory at: artifacts]
+[2026-10-14 00:01:40,987:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\config\config.yaml]
+[2026-10-14 00:01:40,994:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\params.yaml]
+[2026-10-14 00:01:41,001:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\schema.yaml]
+[2026-10-14 00:01:41,003:INFO:common:created directory at: artifacts]
+[2026-10-14 00:01:41,008:INFO:common:created directory at: artifacts/data_validation]
+[2026-10-14 00:08:57,714:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\config\config.yaml]
+[2026-10-14 00:08:57,718:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\params.yaml]
+[2026-10-14 00:08:57,725:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\schema.yaml]
+[2026-10-14 00:08:57,727:INFO:common:created directory at: artifacts]
+[2026-10-14 00:08:57,728:INFO:common:created directory at: artifacts/data_validation]
+[2026-10-14 00:10:47,957:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\config\config.yaml]
+[2026-10-14 00:10:47,961:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\params.yaml]
+[2026-10-14 00:10:47,967:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\schema.yaml]
+[2026-10-14 00:10:47,969:INFO:common:created directory at: artifacts]
+[2026-10-14 00:10:47,971:INFO:common:created directory at: artifacts/data_validation]
+[2026-10-14 00:22:32,902:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\config\config.yaml]
+[2026-10-14 00:22:32,908:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\params.yaml]
+[2026-10-14 00:22:32,918:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\schema.yaml]
+[2026-10-14 00:22:32,920:INFO:common:created directory at: artifacts]
+[2026-10-14 00:22:32,924:INFO:common:created directory at: artifacts/data_validation]
+[2026-10-14 08:11:29,379:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\config\config.yaml]
+[2026-10-14 08:11:29,396:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\params.yaml]
+[2026-10-14 08:11:29,412:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\schema.yaml]
+[2026-10-14 08:11:29,414:INFO:common:created directory at: artifacts]
+[2026-10-14 08:15:51,688:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\config\config.yaml]
+[2026-10-14 08:15:51,694:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\params.yaml]
+[2026-10-14 08:15:51,703:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\schema.yaml]
+[2026-10-14 08:15:51,706:INFO:common:created directory at: artifacts]
+[2026-10-14 08:15:51,709:INFO:common:created directory at: artifacts/data_validation]
+[2026-10-14 08:17:45,935:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\config\config.yaml]
+[2026-10-14 08:17:45,941:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\params.yaml]
+[2026-10-14 08:17:45,947:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\schema.yaml]
+[2026-10-14 08:17:45,949:INFO:common:created directory at: artifacts]
+[2026-10-14 08:17:45,953:INFO:common:created directory at: artifacts/data_validation]
+[2026-10-14 08:46:24,554:INFO:main:>>>>>>>>>>>>>>> stage DataIngestionStage started <<<<<<<<<<<<<<<]
+[2026-10-14 08:46:24,554:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\config\config.yaml]
+[2026-10-14 08:46:24,554:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\params.yaml]
+[2026-10-14 08:46:24,569:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\schema.yaml]
+[2026-10-14 08:46:24,571:INFO:common:created directory at: artifacts]
+[2026-10-14 08:46:24,572:INFO:common:created directory at: artifacts/data_ingestion]
+[2026-10-14 08:46:25,635:INFO:data_ingestion:artifacts\data_ingestion\data.zip downloaded with the following info:
+Connection: close
+Content-Length: 23329
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "c69888a4ae59bc5a893392785a938ccd4937981c06ba8a9d6a21aa52b4ab5b6e"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: B300:3F8693:21F3D3:23614F:6ACFA3D1
+x-github-edge-region: fra
+Accept-Ranges: bytes
+Date: Wed, 14 Oct 2026 15:46:26 GMT
+Via: 1.1 varnish
+X-Served-By: cache-sin-wsap440085-SIN
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1791992786.706395,VS0,VE430
+Vary: Authorization,Accept-Encoding
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 162088dd67c73c65f1cae27e92e4f3133b39ff37
+Expires: Wed, 14 Oct 2026 15:51:26 GMT
+Source-Age: 0
+
+]
+[2026-10-14 08:46:25,658:INFO:data_ingestion:Files extracted successfully to: artifacts\data_ingestion]
+[2026-10-14 08:46:25,664:INFO:main:>>>>>>>>>>>>>>> stage DataIngestionStage completed <<<<<<<<<<<<<<<
+
+x=======================x]
+[2026-10-14 08:46:25,664:INFO:main:>>>>>>>>>>>>>>> stage DATA_Validation_Stage started <<<<<<<<<<<<<<<]
+[2026-10-14 08:46:25,668:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\config\config.yaml]
+[2026-10-14 08:46:25,675:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\params.yaml]
+[2026-10-14 08:46:25,685:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\schema.yaml]
+[2026-10-14 08:46:25,690:INFO:common:created directory at: artifacts]
+[2026-10-14 08:46:25,691:ERROR:main:'ConfigurationManager' object has no attribute 'get_data_validation_config']
+Traceback (most recent call last):
+  File "c:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\main.py", line 44, in <module>
+    data_validation.initiate_data_validation()
+  File "c:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\src\Mlops_project_quality_predictor\pipeline\data_validation_pipline.py", line 28, in initiate_data_validation
+    data_validation_config = config.get_data_validation_config()
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ConfigurationManager' object has no attribute 'get_data_validation_config'. Did you mean: 'get_data_ingestion_config'?
+[2026-10-14 08:49:09,296:INFO:main:>>>>>>>>>>>>>>> stage DataIngestionStage started <<<<<<<<<<<<<<<]
+[2026-10-14 08:49:09,305:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\config\config.yaml]
+[2026-10-14 08:49:09,310:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\params.yaml]
+[2026-10-14 08:49:09,323:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\schema.yaml]
+[2026-10-14 08:49:09,329:INFO:common:created directory at: artifacts]
+[2026-10-14 08:49:09,339:INFO:common:created directory at: artifacts/data_ingestion]
+[2026-10-14 08:49:09,830:INFO:data_ingestion:artifacts\data_ingestion\data.zip downloaded with the following info:
+Connection: close
+Content-Length: 23329
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "c69888a4ae59bc5a893392785a938ccd4937981c06ba8a9d6a21aa52b4ab5b6e"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: B300:3F8693:21F3D3:23614F:6ACFA3D1
+x-github-edge-region: fra
+Accept-Ranges: bytes
+Date: Wed, 14 Oct 2026 15:49:10 GMT
+Via: 1.1 varnish
+X-Served-By: cache-sin-wsap440087-SIN
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1791992950.464692,VS0,VE2
+Vary: Authorization,Accept-Encoding
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 9f11889a8ca48c2fc344055dc96b7fc3665af69d
+Expires: Wed, 14 Oct 2026 15:54:10 GMT
+Source-Age: 164
+
+]
+[2026-10-14 08:49:09,846:INFO:data_ingestion:Files extracted successfully to: artifacts\data_ingestion]
+[2026-10-14 08:49:09,849:INFO:main:>>>>>>>>>>>>>>> stage DataIngestionStage completed <<<<<<<<<<<<<<<
+
+x=======================x]
+[2026-10-14 08:49:09,850:INFO:main:>>>>>>>>>>>>>>> stage DATA_Validation_Stage started <<<<<<<<<<<<<<<]
+[2026-10-14 08:49:09,854:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\config\config.yaml]
+[2026-10-14 08:49:09,857:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\params.yaml]
+[2026-10-14 08:49:09,857:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\schema.yaml]
+[2026-10-14 08:49:09,862:INFO:common:created directory at: artifacts]
+[2026-10-14 08:49:09,864:INFO:common:created directory at: artifacts/data_validation]
+[2026-10-14 08:49:09,890:INFO:main:>>>>>>>>>>>>>>> stage DATA_Validation_Stage completed <<<<<<<<<<<<<<<
+
+x=======================x]

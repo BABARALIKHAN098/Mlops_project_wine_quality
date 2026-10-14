@@ -21,3 +21,27 @@ class DataIngestion_Config:
 
     # Store the directory path where the downloaded dataset will be extracted.
     unzip_dir: Path
+
+@dataclass
+class DataValidationConfig:
+    # Folder where validation outputs (e.g. the status file) are stored.
+    # Comes from `data_validation.root_dir` in config.yaml.
+    root_dir: Path
+
+    # Path of the text file where the validation result (True/False) is written.
+    # Comes from `data_validation.STATUS_FILE` in config.yaml.
+    STATUS_FILE: str
+
+    # Path to the CSV file that will be validated
+    # (here: artifacts/data_ingestion/winequality-red.csv).
+    # Comes from `data_validation.unzip_data_dir` in config.yaml.
+    unzip_data_dir: Path
+
+    # Expected schema: a dictionary of column names and their data types
+    # (e.g. {"alcohol": "float64", ...}).
+    # Comes from the `COLUMNS` section of schema.yaml.
+    # The validator checks that every column in the CSV exists in this dict.
+    all_schema: dict
+
+
+

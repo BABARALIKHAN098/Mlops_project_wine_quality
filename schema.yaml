@@ -12,3 +12,8 @@ COLUMNS:
   sulphates: float
   alcohol: float
   quality: int
+
+  TARGET:
+    name: quality
+    type: int
+    description: The quality of the wine
