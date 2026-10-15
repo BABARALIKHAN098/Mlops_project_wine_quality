@@ -1,7 +1,7 @@
 # Dataclasses that hold the settings for each pipeline stage.
 from src.Mlops_project_quality_predictor.entity.config_entity import (
     DataIngestion_Config,
-    DataValidationConfig,   # NEW: needed by get_data_validation_config()
+    DataValidationConfig,DataTransformationConfig   # NEW: needed by get_data_validation_config()
 )
 
 # Paths to config.yaml, params.yaml and schema.yaml.
@@ -85,3 +85,28 @@ class ConfigurationManager:
 
         # Return the finished config object to the pipeline stage.
         return data_validation_config
+
+    def get_data_transformation_config(self) -> DataTransformationConfig:
+            """Build and return the config for the data transformation stage."""
+    
+            # Pull the data_transformation section out of config.yaml
+            config = self.config.data_transformation
+    
+            # Create the folder where transformation outputs will be saved
+            create_directories([config.root_dir])
+    
+            # Wrap the values in a dataclass so the next stage gets a typed object
+            data_transformation_config = DataTransformationConfig(
+                root_dir=config.root_dir,
+                data_path=config.data_path
+            )
+    
+            # Return it (without this line the method returns None)
+            return data_transformation_config
+
+
+    
+
+
+
+    

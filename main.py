@@ -4,7 +4,7 @@ from src.Mlops_project_quality_predictor.utils import logger
 # Pipeline stage classes. The module names must match your actual file names.
 from src.Mlops_project_quality_predictor.pipeline.data_ingestion_pipline import DataIngestionTrainingPipeline
 from src.Mlops_project_quality_predictor.pipeline.data_validation_pipline import DataValidationTrainingPipeline
-
+from src.Mlops_project_quality_predictor.pipeline.data_transformation_pipeline import DataTransformationPipeline
 
 # ---------------------------------------------------------------
 # Stage 1: Data Ingestion (download the zip and extract the CSV)
@@ -50,3 +50,28 @@ except Exception as e:
     # Save the full traceback to the log, then re-raise.
     logger.exception(e)
     raise e
+
+
+STAGE_NAME = "Data_Transformation_Stage"
+
+# BUG FIX: without this guard, the stage would also run on import
+# (for example from a test or another module), not just when executed directly.
+if __name__ == "__main__":
+    try:
+        logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<")
+
+        # STYLE FIX: lowercase variable name.
+        data_transformation = DataTransformationPipeline()
+
+        # NOTE: this method name must match the one defined in the class.
+        # Your original class had initiate_data_ingestion(), so either
+        # rename it there or call that name here.
+        data_transformation.initiate_data_transformation()
+
+        logger.info(f">>>>>> stage {STAGE_NAME} completed <<<<<<\n\nx==========x")
+
+    except Exception as e:
+        # Log the full traceback, then re-raise so the failure isn't hidden
+        # and the pipeline (or DVC/CI) stops with a non-zero exit code.
+        logger.exception(e)
+        raise
