@@ -53,4 +53,22 @@ class DataTransformationConfig:
     data_path : Path
 
 
+@dataclass(frozen=True)
+class ModelTrainerConfig:
+    """
+    Typed container for everything the ModelTrainer stage needs.
+    Built by ConfigurationManager.get_model_trainer() and passed into ModelTrainer.
+    """
+
+    root_dir: Path          # Folder where the trained model will be saved
+    train_data_path: Path   # Path to the training CSV
+    test_data_path: Path    # Path to the test CSV
+    model_name: str         # Filename of the saved model (e.g., model.joblib)
+    alpha: float            # ElasticNet overall regularization strength
+    l1_ratio: float         # ElasticNet mix of L1 (Lasso) vs L2 (Ridge) penalty
+    target_column: str      # Name of the column the model should predict
+
+
+
+
 

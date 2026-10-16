@@ -355,3 +355,233 @@ x=======================x]
 [2026-10-15 02:58:14,185:INFO:main:>>>>>> stage Data_Transformation_Stage completed <<<<<<
 
 x==========x]
+[2026-10-15 21:45:50,983:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\config\config.yaml]
+[2026-10-15 21:45:50,989:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\params.yaml]
+[2026-10-15 21:45:51,006:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\schema.yaml]
+[2026-10-15 21:45:51,010:INFO:common:created directory at: artifacts]
+[2026-10-15 21:45:51,012:ERROR:4126155610:Model trainer stage failed: "'ConfigBox' object has no attribute 'target_column'"]
+Traceback (most recent call last):
+  File "box/box.py", line 605, in box.box.Box.__getitem__
+KeyError: 'TARGET_COLUMN'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/box.py", line 644, in box.box.Box.__getattr__
+  File "box/box.py", line 632, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'TARGET_COLUMN'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 646, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'TARGET_COLUMN'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/config_box.py", line 29, in box.config_box.ConfigBox.__getattr__
+  File "box/box.py", line 660, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'TARGET_COLUMN'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 605, in box.box.Box.__getitem__
+KeyError: 'target_column'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/box.py", line 644, in box.box.Box.__getattr__
+  File "box/box.py", line 632, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'target_column'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 646, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'target_column'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\H_KhaN\AppData\Local\Temp\ipykernel_16544\4126155610.py", line 6, in <module>
+    model_trainer_config = config.get_model_trainer()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\H_KhaN\AppData\Local\Temp\ipykernel_16544\2301751484.py", line 37, in get_model_trainer
+    schema = self.schema.TARGET_COLUMN
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "box/config_box.py", line 31, in box.config_box.ConfigBox.__getattr__
+  File "box/box.py", line 660, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'target_column'"
+[2026-10-15 21:47:42,885:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\config\config.yaml]
+[2026-10-15 21:47:42,890:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\params.yaml]
+[2026-10-15 21:47:42,897:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\schema.yaml]
+[2026-10-15 21:47:42,899:INFO:common:created directory at: artifacts]
+[2026-10-15 21:47:42,901:ERROR:4126155610:Model trainer stage failed: "'ConfigBox' object has no attribute 'target_column'"]
+Traceback (most recent call last):
+  File "box/box.py", line 605, in box.box.Box.__getitem__
+KeyError: 'TARGET_COLUMN'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/box.py", line 644, in box.box.Box.__getattr__
+  File "box/box.py", line 632, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'TARGET_COLUMN'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 646, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'TARGET_COLUMN'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/config_box.py", line 29, in box.config_box.ConfigBox.__getattr__
+  File "box/box.py", line 660, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'TARGET_COLUMN'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 605, in box.box.Box.__getitem__
+KeyError: 'target_column'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/box.py", line 644, in box.box.Box.__getattr__
+  File "box/box.py", line 632, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'target_column'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 646, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'target_column'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\H_KhaN\AppData\Local\Temp\ipykernel_16544\4126155610.py", line 6, in <module>
+    model_trainer_config = config.get_model_trainer()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\H_KhaN\AppData\Local\Temp\ipykernel_16544\2301751484.py", line 37, in get_model_trainer
+    schema = self.schema.TARGET_COLUMN
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "box/config_box.py", line 31, in box.config_box.ConfigBox.__getattr__
+  File "box/box.py", line 660, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'target_column'"
+[2026-10-15 21:47:53,377:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\config\config.yaml]
+[2026-10-15 21:47:53,381:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\params.yaml]
+[2026-10-15 21:47:53,388:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\schema.yaml]
+[2026-10-15 21:47:53,392:INFO:common:created directory at: artifacts]
+[2026-10-15 21:47:53,393:ERROR:4126155610:Model trainer stage failed: "'ConfigBox' object has no attribute 'target_column'"]
+Traceback (most recent call last):
+  File "box/box.py", line 605, in box.box.Box.__getitem__
+KeyError: 'TARGET_COLUMN'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/box.py", line 644, in box.box.Box.__getattr__
+  File "box/box.py", line 632, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'TARGET_COLUMN'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 646, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'TARGET_COLUMN'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/config_box.py", line 29, in box.config_box.ConfigBox.__getattr__
+  File "box/box.py", line 660, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'TARGET_COLUMN'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 605, in box.box.Box.__getitem__
+KeyError: 'target_column'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/box.py", line 644, in box.box.Box.__getattr__
+  File "box/box.py", line 632, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'target_column'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 646, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'target_column'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\H_KhaN\AppData\Local\Temp\ipykernel_16544\4126155610.py", line 6, in <module>
+    model_trainer_config = config.get_model_trainer()
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\H_KhaN\AppData\Local\Temp\ipykernel_16544\2301751484.py", line 37, in get_model_trainer
+    schema = self.schema.TARGET_COLUMN
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "box/config_box.py", line 31, in box.config_box.ConfigBox.__getattr__
+  File "box/box.py", line 660, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'target_column'"
+[2026-10-15 21:49:08,772:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\config\config.yaml]
+[2026-10-15 21:49:08,776:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\params.yaml]
+[2026-10-15 21:49:08,780:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\schema.yaml]
+[2026-10-15 21:49:08,783:INFO:common:created directory at: artifacts]
+[2026-10-15 21:50:31,332:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\config\config.yaml]
+[2026-10-15 21:50:31,335:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\params.yaml]
+[2026-10-15 21:50:31,341:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\schema.yaml]
+[2026-10-15 21:50:31,342:INFO:common:created directory at: artifacts]
+[2026-10-15 21:50:31,345:INFO:common:created directory at: artifacts/model_trainer]
+[2026-10-15 22:10:38,668:INFO:main:>>>>>>>>>>>>>>> stage DataIngestionStage started <<<<<<<<<<<<<<<]
+[2026-10-15 22:10:38,671:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\config\config.yaml]
+[2026-10-15 22:10:38,676:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\params.yaml]
+[2026-10-15 22:10:38,680:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\schema.yaml]
+[2026-10-15 22:10:38,684:INFO:common:created directory at: artifacts]
+[2026-10-15 22:10:38,686:INFO:common:created directory at: artifacts/data_ingestion]
+[2026-10-15 22:10:38,686:INFO:data_ingestion:File already exists.]
+[2026-10-15 22:10:38,708:INFO:data_ingestion:Files extracted successfully to: artifacts\data_ingestion]
+[2026-10-15 22:10:38,710:INFO:main:>>>>>>>>>>>>>>> stage DataIngestionStage completed <<<<<<<<<<<<<<<
+
+x=======================x]
+[2026-10-15 22:10:38,710:INFO:main:>>>>>>>>>>>>>>> stage DATA_Validation_Stage started <<<<<<<<<<<<<<<]
+[2026-10-15 22:10:38,715:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\config\config.yaml]
+[2026-10-15 22:10:38,718:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\params.yaml]
+[2026-10-15 22:10:38,724:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\schema.yaml]
+[2026-10-15 22:10:38,726:INFO:common:created directory at: artifacts]
+[2026-10-15 22:10:38,727:INFO:common:created directory at: artifacts/data_validation]
+[2026-10-15 22:10:38,765:INFO:main:>>>>>>>>>>>>>>> stage DATA_Validation_Stage completed <<<<<<<<<<<<<<<
+
+x=======================x]
+[2026-10-15 22:10:38,766:INFO:main:>>>>>> stage Data_Transformation_Stage started <<<<<<]
+[2026-10-15 22:10:38,782:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\config\config.yaml]
+[2026-10-15 22:10:38,784:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\params.yaml]
+[2026-10-15 22:10:38,788:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\schema.yaml]
+[2026-10-15 22:10:38,790:INFO:common:created directory at: artifacts]
+[2026-10-15 22:10:38,791:INFO:common:created directory at: artifacts/data_transformation]
+[2026-10-15 22:10:38,837:INFO:data_transformation:Split data into training and test sets]
+[2026-10-15 22:10:38,837:INFO:data_transformation:(1199, 12)]
+[2026-10-15 22:10:38,837:INFO:data_transformation:(400, 12)]
+[2026-10-15 22:10:38,837:INFO:main:>>>>>> stage Data_Transformation_Stage completed <<<<<<
+
+x==========x]
+[2026-10-15 22:10:38,837:INFO:main:>>>>>>>>>>>> stage Model_trainer_STAGE started <<<<<<<<<<<<<<<]
+[2026-10-15 22:10:38,847:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\config\config.yaml]
+[2026-10-15 22:10:38,850:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\params.yaml]
+[2026-10-15 22:10:38,851:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\schema.yaml]
+[2026-10-15 22:10:38,851:INFO:common:created directory at: artifacts]
+[2026-10-15 22:10:38,857:INFO:common:created directory at: artifacts/model_trainer]
+[2026-10-15 22:10:39,014:INFO:main:>>>>>>>>>>>>>>> stage Model_trainer_STAGE completed <<<<<<<<<<<<<<<<<<<
+
+x==================x]

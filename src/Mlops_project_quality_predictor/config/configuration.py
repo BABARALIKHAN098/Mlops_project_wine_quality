@@ -1,7 +1,7 @@
 # Dataclasses that hold the settings for each pipeline stage.
 from src.Mlops_project_quality_predictor.entity.config_entity import (
     DataIngestion_Config,
-    DataValidationConfig,DataTransformationConfig   # NEW: needed by get_data_validation_config()
+    DataValidationConfig,DataTransformationConfig,ModelTrainerConfig   # NEW: needed by get_data_validation_config()
 )
 
 # Paths to config.yaml, params.yaml and schema.yaml.
@@ -103,6 +103,38 @@ class ConfigurationManager:
     
             # Return it (without this line the method returns None)
             return data_transformation_config
+
+
+    def get_model_trainer(self) -> ModelTrainerConfig:
+                """
+                Build and return the ModelTrainerConfig used by the ModelTrainer stage.
+                Combines paths from config.yaml, hyperparameters from params.yaml,
+                and the target column name from schema.yaml.
+                """
+                # Section of config.yaml with paths for the model trainer stage
+                config = self.config.model_trainer
+    
+                # ElasticNet hyperparameters (alpha, l1_ratio) from params.yaml
+                params = self.params.ElasticNet
+    
+                # Target column definition from schema.yaml
+                schema = self.schema.TARGET
+    
+                # Create the model trainer's output directory if it doesn't exist
+                create_directories([config.root_dir])
+    
+                # Bundle everything into a typed config object
+                model_trainer_config = ModelTrainerConfig(
+                    root_dir=config.root_dir,                  # Where the trained model will be saved
+                    train_data_path=config.train_data_path,    # Path to the training CSV
+                    test_data_path=config.test_data_path,      # Path to the test CSV
+                    model_name=config.model_name,              # Filename for the saved model (e.g., model.joblib)
+                    alpha=params.alpha,                        # Regularization strength
+                    l1_ratio=params.l1_ratio,                  # L1 vs L2 penalty mix
+                    target_column=schema.name,                 # Name of the column to predict
+                )
+    
+                return model_trainer_config
 
 
     

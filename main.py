@@ -5,7 +5,7 @@ from src.Mlops_project_quality_predictor.utils import logger
 from src.Mlops_project_quality_predictor.pipeline.data_ingestion_pipline import DataIngestionTrainingPipeline
 from src.Mlops_project_quality_predictor.pipeline.data_validation_pipline import DataValidationTrainingPipeline
 from src.Mlops_project_quality_predictor.pipeline.data_transformation_pipeline import DataTransformationPipeline
-
+from src.Mlops_project_quality_predictor.pipeline.model_trainer_pipeline import ModelTrainerTrainingpipeline
 # ---------------------------------------------------------------
 # Stage 1: Data Ingestion (download the zip and extract the CSV)
 # ---------------------------------------------------------------
@@ -75,3 +75,28 @@ if __name__ == "__main__":
         # and the pipeline (or DVC/CI) stops with a non-zero exit code.
         logger.exception(e)
         raise
+
+
+
+# Name of this stage, used in the log messages
+STAGE_NAME = "Model_trainer_STAGE"
+
+try:
+    # Log the start of the stage so it's easy to find in the log file
+    logger.info(f">>>>>>>>>>>> stage {STAGE_NAME} started <<<<<<<<<<<<<<<")
+
+    # Create the pipeline object for the model training stage
+    model_trainer_pipeline = ModelTrainerTrainingpipeline()
+
+    # Run the stage: build config -> create trainer -> train and save the model
+    model_trainer_pipeline.initiate_model_training()
+
+    # Log successful completion, followed by a separator line for readability
+    logger.info(f">>>>>>>>>>>>>>> stage {STAGE_NAME} completed <<<<<<<<<<<<<<<<<<<\n\nx==================x")
+
+except Exception as e:
+    # Log the full traceback so the failure is recorded in the log file
+    logger.exception(e)
+
+    # Re-raise so the pipeline stops instead of silently continuing
+    raise e
