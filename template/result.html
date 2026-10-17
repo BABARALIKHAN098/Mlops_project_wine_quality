@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Prediction | Vintner</title>
+    <style>
+        :root { --ink: #241b2f; --muted: #766d80; --wine: #7c294d; --cream: #fffaf5; }
+        * { box-sizing: border-box; }
+        body { display: grid; place-items: center; min-height: 100vh; margin: 0; padding: 24px; color: var(--ink); font: 16px/1.5 Inter, ui-sans-serif, system-ui, sans-serif; background: radial-gradient(circle at 10% 10%, #f5d9df 0, transparent 35%), var(--cream); }
+        .card { width: min(560px, 100%); padding: clamp(30px, 7vw, 62px); text-align: center; border: 1px solid #eadfe0; border-radius: 26px; background: #fff; box-shadow: 0 20px 60px rgba(84,23,49,.1); }
+        .check { display: grid; place-items: center; width: 58px; height: 58px; margin: 0 auto 24px; border-radius: 50%; color: #fff; background: var(--wine); font-size: 1.5rem; }
+        .eyebrow { margin: 0 0 8px; color: var(--wine); font-size: .78rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+        h1 { margin: 0; font-size: clamp(2.2rem, 7vw, 4rem); line-height: 1; letter-spacing: -.06em; }
+        .score { margin: 28px 0 8px; color: var(--wine); font-size: 5rem; font-weight: 850; line-height: 1; }
+        .caption { margin: 0 0 32px; color: var(--muted); }
+        a { display: inline-block; padding: 13px 20px; border-radius: 10px; color: #fff; background: var(--wine); font-weight: 800; text-decoration: none; }
+        a:hover { background: #541731; }
+    </style>
+</head>
+<body>
+<main class="card">
+    <div class="check" aria-hidden="true">✓</div>
+    <p class="eyebrow">Prediction complete</p>
+    <h1>Your wine quality</h1>
+    <div class="score">{{ prediction }}</div>
+    <p class="caption">Estimated quality score from the trained model.</p>
+    <a href="{{ url_for('homepage') }}">Analyze another wine</a>
+</main>
+</body>
+</html>

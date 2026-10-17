@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vintner | Wine Quality Predictor</title>
+    <style>
+        :root {
+            --ink: #241b2f;
+            --muted: #766d80;
+            --wine: #7c294d;
+            --wine-dark: #541731;
+            --cream: #fffaf5;
+            --line: #eadfe0;
+            --card: #ffffff;
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            min-height: 100vh;
+            color: var(--ink);
+            font: 16px/1.5 Inter, ui-sans-serif, system-ui, -apple-system, sans-serif;
+            background: radial-gradient(circle at 90% 0%, #f5d9df 0, transparent 35%), var(--cream);
+        }
+        .shell { width: min(1080px, calc(100% - 32px)); margin: 0 auto; padding: 28px 0 56px; }
+        header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 64px; }
+        .brand { display: flex; align-items: center; gap: 11px; font-weight: 800; letter-spacing: -.03em; }
+        .brand-mark { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 12px 12px 12px 3px; color: #fff; background: var(--wine); }
+        .eyebrow { margin: 0 0 10px; color: var(--wine); font-size: .78rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+        h1 { max-width: 650px; margin: 0; font-size: clamp(2.5rem, 6vw, 5.3rem); line-height: .98; letter-spacing: -.065em; }
+        .intro { max-width: 560px; margin: 22px 0 42px; color: var(--muted); font-size: 1.1rem; }
+        .form-card { padding: clamp(22px, 4vw, 40px); border: 1px solid var(--line); border-radius: 24px; background: rgba(255,255,255,.86); box-shadow: 0 20px 60px rgba(84,23,49,.08); }
+        .form-heading { display: flex; justify-content: space-between; gap: 20px; align-items: end; margin-bottom: 24px; }
+        h2 { margin: 0; font-size: 1.35rem; letter-spacing: -.03em; }
+        .hint { margin: 0; color: var(--muted); font-size: .9rem; }
+        .fields { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+        label { display: grid; gap: 7px; color: #584d5d; font-size: .86rem; font-weight: 700; }
+        input { width: 100%; padding: 12px 13px; border: 1px solid var(--line); border-radius: 10px; color: var(--ink); background: #fff; font: inherit; outline: none; transition: border .2s, box-shadow .2s; }
+        input:focus { border-color: var(--wine); box-shadow: 0 0 0 3px rgba(124,41,77,.12); }
+        .actions { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 30px; }
+        button { padding: 13px 22px; border: 0; border-radius: 10px; color: #fff; background: var(--wine); font: inherit; font-weight: 800; cursor: pointer; }
+        button:hover { background: var(--wine-dark); }
+        .range-note { color: var(--muted); font-size: .85rem; }
+        .error { margin: 0 0 20px; padding: 12px 15px; border-radius: 10px; color: #8c1d35; background: #fff0f1; }
+        @media (max-width: 700px) {
+            header { margin-bottom: 42px; }
+            .fields { grid-template-columns: repeat(2, 1fr); }
+            .form-heading, .actions { align-items: start; flex-direction: column; }
+        }
+        @media (max-width: 430px) { .fields { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+<main class="shell">
+    <header>
+        <div class="brand"><span class="brand-mark">W</span><span>Vintner</span></div>
+        <span class="hint">ML quality lab</span>
+    </header>
+    <section>
+        <p class="eyebrow">Red wine analysis</p>
+        <h1>Find the character in every pour.</h1>
+        <p class="intro">Enter the wine’s laboratory measurements and our trained ElasticNet model will estimate its quality score.</p>
+    </section>
+    <form class="form-card" action="{{ url_for('predict_route') }}" method="post">
+        <div class="form-heading">
+            <div><h2>Wine measurements</h2><p class="hint">Use decimal values where needed.</p></div>
+            <span class="hint">11 features</span>
+        </div>
+        {% if error %}<p class="error" role="alert">{{ error }}</p>{% endif %}
+        {% set fields = [
+            ('fixed_acidity', 'Fixed acidity', '8.4'),
+            ('volatile_acidity', 'Volatile acidity', '0.56'),
+            ('citric_acid', 'Citric acid', '0.04'),
+            ('residual_sugar', 'Residual sugar', '2.0'),
+            ('chlorides', 'Chlorides', '0.082'),
+            ('free_sulfur_dioxide', 'Free sulfur dioxide', '10'),
+            ('total_sulfur_dioxide', 'Total sulfur dioxide', '22'),
+            ('density', 'Density', '0.9976'),
+            ('pH', 'pH', '3.22'),
+            ('sulphates', 'Sulphates', '0.44'),
+            ('alcohol', 'Alcohol', '9.6')
+        ] %}
+        <div class="fields">
+            {% for name, label, default in fields %}
+            <label for="{{ name }}">{{ label }}
+                <input id="{{ name }}" name="{{ name }}" type="number" step="any" required
+                    value="{{ form_values.get(name, default) if form_values else default }}">
+            </label>
+            {% endfor %}
+        </div>
+        <div class="actions">
+            <span class="range-note">The result is an estimated score from the trained model.</span>
+            <button type="submit">Predict quality <span aria-hidden="true">→</span></button>
+        </div>
+    </form>
+</main>
+</body>
+</html>

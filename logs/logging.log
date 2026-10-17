@@ -655,3 +655,54 @@ x==================x]
 [2026-10-16 22:42:05,485:INFO:main:>>>>>>>>>>>> stage Model Evaluation Stage COMPLETED <<<<<<<<<<<<
 
 x==================x]
+[2026-10-17 11:46:52,934:INFO:main:>>>>>>>>>>>>>>> stage DataIngestionStage started <<<<<<<<<<<<<<<]
+[2026-10-17 11:46:52,946:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\config\config.yaml]
+[2026-10-17 11:46:52,959:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\params.yaml]
+[2026-10-17 11:46:52,962:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\schema.yaml]
+[2026-10-17 11:46:52,963:INFO:common:created directory at: artifacts]
+[2026-10-17 11:46:52,965:INFO:common:created directory at: artifacts/data_ingestion]
+[2026-10-17 11:46:52,967:INFO:data_ingestion:File already exists.]
+[2026-10-17 11:46:52,986:INFO:data_ingestion:Files extracted successfully to: artifacts\data_ingestion]
+[2026-10-17 11:46:52,988:INFO:main:>>>>>>>>>>>>>>> stage DataIngestionStage completed <<<<<<<<<<<<<<<
+
+x=======================x]
+[2026-10-17 11:46:52,989:INFO:main:>>>>>>>>>>>>>>> stage DATA_Validation_Stage started <<<<<<<<<<<<<<<]
+[2026-10-17 11:46:52,993:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\config\config.yaml]
+[2026-10-17 11:46:52,998:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\params.yaml]
+[2026-10-17 11:46:53,003:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\schema.yaml]
+[2026-10-17 11:46:53,004:INFO:common:created directory at: artifacts]
+[2026-10-17 11:46:53,006:INFO:common:created directory at: artifacts/data_validation]
+[2026-10-17 11:46:53,036:INFO:main:>>>>>>>>>>>>>>> stage DATA_Validation_Stage completed <<<<<<<<<<<<<<<
+
+x=======================x]
+[2026-10-17 11:46:53,038:INFO:main:>>>>>> stage Data_Transformation_Stage started <<<<<<]
+[2026-10-17 11:46:53,050:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\config\config.yaml]
+[2026-10-17 11:46:53,053:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\params.yaml]
+[2026-10-17 11:46:53,055:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\schema.yaml]
+[2026-10-17 11:46:53,057:INFO:common:created directory at: artifacts]
+[2026-10-17 11:46:53,058:INFO:common:created directory at: artifacts/data_transformation]
+[2026-10-17 11:46:53,092:INFO:data_transformation:Split data into training and test sets]
+[2026-10-17 11:46:53,093:INFO:data_transformation:(1199, 12)]
+[2026-10-17 11:46:53,093:INFO:data_transformation:(400, 12)]
+[2026-10-17 11:46:53,096:INFO:main:>>>>>> stage Data_Transformation_Stage completed <<<<<<
+
+x==========x]
+[2026-10-17 11:46:53,096:INFO:main:>>>>>>>>>>>> stage Model_trainer_STAGE started <<<<<<<<<<<<<<<]
+[2026-10-17 11:46:53,099:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\config\config.yaml]
+[2026-10-17 11:46:53,101:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\params.yaml]
+[2026-10-17 11:46:53,104:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\schema.yaml]
+[2026-10-17 11:46:53,104:INFO:common:created directory at: artifacts]
+[2026-10-17 11:46:53,104:INFO:common:created directory at: artifacts/model_trainer]
+[2026-10-17 11:46:53,202:INFO:main:>>>>>>>>>>>>>>> stage Model_trainer_STAGE completed <<<<<<<<<<<<<<<<<<<
+
+x==================x]
+[2026-10-17 11:46:53,202:INFO:main:>>>>>>>>>>>> stage Model Evaluation Stage STARTED <<<<<<<<<<<<]
+[2026-10-17 11:46:53,205:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\config\config.yaml]
+[2026-10-17 11:46:53,206:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\params.yaml]
+[2026-10-17 11:46:53,210:INFO:common:YAML file loaded successfully: C:\Users\H_KhaN\OneDrive\Desktop\Mlops_project_wine_quality\schema.yaml]
+[2026-10-17 11:46:53,211:INFO:common:created directory at: artifacts]
+[2026-10-17 11:46:53,212:INFO:common:created directory at: artifacts/model_evaluation]
+[2026-10-17 11:46:57,138:INFO:common:json file saved at: artifacts\model_evaluation\metrics.json]
+[2026-10-17 11:47:35,185:INFO:main:>>>>>>>>>>>> stage Model Evaluation Stage COMPLETED <<<<<<<<<<<<
+
+x==================x]
