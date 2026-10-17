@@ -68,7 +68,18 @@ class ModelTrainerConfig:
     l1_ratio: float         # ElasticNet mix of L1 (Lasso) vs L2 (Ridge) penalty
     target_column: str      # Name of the column the model should predict
 
+@dataclass()
+class ModelEvaluationConfig:
+    """Holds all settings needed for the model evaluation stage."""
 
+    root_dir: Path            # Root folder where evaluation outputs are stored
+    test_data_path: Path      # Path to the test dataset (e.g., test.csv)
+    model_path: Path          # Path to the trained model file (e.g., model.joblib)
+    all_params: dict          # Model hyperparameters (e.g., from params.yaml)
+    metric_file_name: Path    # File where evaluation metrics (e.g., JSON) are saved
+    target_column: str        # Name of the target/label column in the dataset
+    mlflow_uri: str           # MLflow tracking server URI for logging experiments        # MLflow tracking server URI for logging experiments
+    
 
 
 

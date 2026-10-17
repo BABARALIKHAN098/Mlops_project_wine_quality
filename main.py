@@ -6,6 +6,7 @@ from src.Mlops_project_quality_predictor.pipeline.data_ingestion_pipline import 
 from src.Mlops_project_quality_predictor.pipeline.data_validation_pipline import DataValidationTrainingPipeline
 from src.Mlops_project_quality_predictor.pipeline.data_transformation_pipeline import DataTransformationPipeline
 from src.Mlops_project_quality_predictor.pipeline.model_trainer_pipeline import ModelTrainerTrainingpipeline
+from src.Mlops_project_quality_predictor.pipeline.Model_evaluation_pipeline import  ModelEvaluationTrainingPipeline
 # ---------------------------------------------------------------
 # Stage 1: Data Ingestion (download the zip and extract the CSV)
 # ---------------------------------------------------------------
@@ -100,3 +101,29 @@ except Exception as e:
 
     # Re-raise so the pipeline stops instead of silently continuing
     raise e
+
+
+
+# Name of this stage, used in the log messages below
+STAGE_NAME = "Model Evaluation Stage"
+
+try:
+    # Log that the stage is starting
+    logger.info(f">>>>>>>>>>>> stage {STAGE_NAME} STARTED <<<<<<<<<<<<")
+
+    # Create the pipeline object for the evaluation stage
+    # (renamed from data_evaluation, since this evaluates the model)
+    model_evaluation_pipeline = ModelEvaluationTrainingPipeline()
+
+    # Run the stage: load config, compute metrics, save JSON, log to MLflow
+    # (method name has a typo, "evaltion", and must match the pipeline class)
+    model_evaluation_pipeline.initiate_model_evaltion()
+
+    # Log that the stage finished successfully
+    logger.info(f">>>>>>>>>>>> stage {STAGE_NAME} COMPLETED <<<<<<<<<<<<\n\nx==================x")
+
+except Exception as e:
+    # Write the full error with its traceback to the log
+    logger.exception(e)
+    # Re-raise with a bare `raise` so the pipeline stops and the original traceback is kept
+    raise

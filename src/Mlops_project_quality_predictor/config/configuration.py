@@ -1,15 +1,27 @@
 # Dataclasses that hold the settings for each pipeline stage.
 from src.Mlops_project_quality_predictor.entity.config_entity import (
     DataIngestion_Config,
-    DataValidationConfig,DataTransformationConfig,ModelTrainerConfig   # NEW: needed by get_data_validation_config()
+    DataValidationConfig,DataTransformationConfig,ModelTrainerConfig,ModelEvaluationConfig   # NEW: needed by get_data_validation_config()
 )
 
 # Paths to config.yaml, params.yaml and schema.yaml.
 from src.Mlops_project_quality_predictor.constants import *
+import os
 
 # Helpers to read YAML files and create folders.
 from src.Mlops_project_quality_predictor.utils.common import read_yaml, create_directories
 
+import os
+from dotenv import load_dotenv, find_dotenv  # Reads KEY=VALUE lines from .env into os.environ
+
+# find_dotenv() searches the current folder and parent folders for a file named .env
+# override=True replaces any old values that are already set in the environment
+load_dotenv(find_dotenv(), override=True)
+
+# Quick check (never print the token itself)
+print(os.getenv("MLFLOW_TRACKING_URI"))       # Should print the .mlflow URL
+print(os.getenv("MLFLOW_TRACKING_USERNAME"))  # Should print your username
+print("Token set:", bool(os.getenv("MLFLOW_TRACKING_PASSWORD")))
 
 # Class responsible for managing project configurations.
 class ConfigurationManager:
@@ -135,6 +147,37 @@ class ConfigurationManager:
                 )
     
                 return model_trainer_config
+
+    def get_model_evaluation_config(self) -> ModelEvaluationConfig:
+            """Build and return the config object for the model evaluation stage."""
+    
+            config = self.config.model_evaluation   # Paths/files for this stage (config.yaml)
+            params = self.params.ElasticNet         # Model hyperparameters (params.yaml)
+            schema = self.schema.TARGET             # Target column info (schema.yaml)
+    
+            # Read the tracking URI from the environment (loaded from .env via load_dotenv).
+            # It must be the DagsHub URL ending in .mlflow, never the token.
+            mlflow_uri = os.getenv("MLFLOW_TRACKING_URI")
+            if not mlflow_uri or not mlflow_uri.startswith("http"):
+                raise ValueError(
+                    "MLFLOW_TRACKING_URI is missing or is not a URL. "
+                    "Run load_dotenv() before creating the config."
+                )
+    
+            # Create the evaluation output folder if it doesn't exist yet
+            create_directories([config.root_dir])
+    
+            model_evaluation_config = ModelEvaluationConfig(
+                root_dir=Path(config.root_dir),                    # Folder for evaluation outputs
+                test_data_path=Path(config.test_data_path),        # Test dataset location
+                model_path=Path(config.model_path),                # Trained model location
+                all_params=params,                                 # Hyperparameters to log
+                metric_file_name=Path(config.metric_file_name),    # File where metrics are saved
+                target_column=schema.name,                         # Name of the label column
+                mlflow_uri=mlflow_uri,                             # DagsHub MLflow URL from the environment
+            )
+    
+            return model_evaluation_config
 
 
     

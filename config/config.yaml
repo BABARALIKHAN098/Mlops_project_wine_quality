@@ -23,5 +23,8 @@ model_trainer:
    test_data_path: artifacts/data_transformation/test.csv
    model_name: model.joblib
 
-   
-    
+model_evaluation:
+  root_dir: artifacts/model_evaluation                        # Folder for evaluation outputs (created by create_directories)
+  test_data_path: artifacts/data_transformation/test.csv      # Test dataset from the transformation stage
+  model_path: artifacts/model_trainer/model.joblib            # Trained model file from the training stage
+  metric_file_name: artifacts/model_evaluation/metrics.json   # Where the metrics JSON is saved
