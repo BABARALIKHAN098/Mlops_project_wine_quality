@@ -69,6 +69,31 @@ The prediction form accepts these 11 measurements:
 
 The model returns an estimated `quality` score.
 
+## Deploy to Vercel
+
+The Flask prediction application is configured as a Vercel Python serverless
+function. The trained model in
+`artifacts/model_trainer/model.joblib` is included in the deployment; training
+is intentionally kept as a local/offline pipeline because Vercel functions
+have ephemeral filesystems and request time limits.
+
+1. Push the repository to GitHub.
+2. In [Vercel](https://vercel.com/new), select **Import Git Repository** and
+   choose this repository.
+3. Keep the repository root as the project root. No build command is required;
+   `vercel.json` selects the Python runtime and routes all requests to
+   `app.py`.
+4. Select **Deploy**. After deployment, open the generated URL and submit the
+   prediction form.
+
+The same deployment can be created from the Vercel CLI:
+
+```powershell
+npm install --global vercel
+vercel
+vercel --prod
+```
+
 ## Getting started
 
 ### 1. Create and activate a virtual environment
@@ -83,8 +108,12 @@ python -m venv .venv
 ### 2. Install dependencies
 
 ```powershell
-pip install -r requirements.txt
+pip install -r requirements-dev.txt
 ```
+
+`requirements.txt` contains only the runtime dependencies needed by the
+prediction application and Vercel. `requirements-dev.txt` adds the training
+pipeline and notebook dependencies.
 
 ### 3. Run the training pipeline
 
@@ -103,7 +132,7 @@ Generated outputs include:
 - `artifacts/model_trainer/model.joblib`
 - `artifacts/model_evaluation/metrics.json`
 
-### 4. Start the prediction web application
+### 4. Start the prediction web application locally
 
 ```powershell
 python app.py
@@ -118,7 +147,6 @@ select **Predict quality** to receive a prediction.
 | --- | --- | --- |
 | `/` | `GET` | Displays the prediction form |
 | `/predict` | `GET`, `POST` | Displays the form or predicts wine quality |
-| `/train` | `GET` | Runs the training pipeline |
 
 ## Dataset
 

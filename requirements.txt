@@ -1,14 +1,5 @@
-pandas
 numpy
+pandas
 scikit-learn
-mlflow
-matplotlib
-python-box
-notebook
-PyYAML
-tqdm
-ensure
 joblib
-types-PyYAML
 Flask
-Flask-Cors

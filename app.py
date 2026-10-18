@@ -1,6 +1,4 @@
 from flask import Flask, render_template, request
-import subprocess
-import sys
 import numpy as np
 from src.Mlops_project_quality_predictor.pipeline.prediction_pipeline import PredictionPipeline
 
@@ -16,19 +14,6 @@ pipeline = PredictionPipeline()
 def homepage():
     """Show the home page with the input form."""
     return render_template("index.html")
-
-
-@app.route("/train", methods=["GET"])  # FIX: `methods` (plural)
-def training():
-    """Run the training pipeline by executing main.py."""
-    # subprocess.run lets us check whether training actually succeeded
-    # sys.executable makes sure the same Python interpreter is used
-    result = subprocess.run([sys.executable, "main.py"])
-
-    # returncode 0 means the script finished without errors
-    if result.returncode == 0:
-        return "Training successful"  # FIX: spelling
-    return "Training failed", 500
 
 
 @app.route("/predict", methods=["POST", "GET"])
@@ -71,6 +56,4 @@ def predict_route():  # FIX: clearer name than `index`
 
 
 if __name__ == "__main__":
-    # FIX: `port` instead of `post`
-    # host="0.0.0.0" makes the app reachable from other machines (needed for Docker/cloud)
     app.run(host="0.0.0.0", port=8080)
